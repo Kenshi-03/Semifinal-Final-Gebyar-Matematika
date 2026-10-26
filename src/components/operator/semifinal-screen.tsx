@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ConfirmDialog } from "@/components/confirm-dialog";
 import type { MatchSlot } from "@/lib/mock-data";
 import { useTimer } from "@/lib/use-timer";
 import {
@@ -35,6 +37,9 @@ export function SemifinalScreen({
   onMatchReset,
   onScoreChange,
 }: SemifinalScreenProps) {
+  const [showEndDialog, setShowEndDialog] = useState(false);
+  const [showResetDialog, setShowResetDialog] = useState(false);
+
   const statusColors = {
     belum_mulai: "bg-gray-500",
     berjalan: "bg-green-500",
@@ -279,7 +284,7 @@ export function SemifinalScreen({
           </Button>
           <Button
             variant="secondary"
-            onClick={onMatchEnd}
+            onClick={() => setShowEndDialog(true)}
             disabled={slot.status !== "berjalan"}
           >
             <FlagOff className="size-4" />
@@ -287,7 +292,7 @@ export function SemifinalScreen({
           </Button>
           <Button
             variant="outline"
-            onClick={onMatchReset}
+            onClick={() => setShowResetDialog(true)}
             disabled={slot.status === "belum_mulai"}
           >
             <RotateCcw className="size-4" />
@@ -295,6 +300,36 @@ export function SemifinalScreen({
           </Button>
         </div>
       </Card>
+
+      {/* Dialog Konfirmasi Akhiri */}
+      <ConfirmDialog
+        open={showEndDialog}
+        onOpenChange={setShowEndDialog}
+        title="Akhiri Pertandingan?"
+        description="Pertandingan akan dihentikan dan timer berhenti. Status akan berubah menjadi Selesai. Anda masih bisa membuka kembali pertandingan untuk koreksi."
+        confirmLabel="Ya, Akhiri"
+        cancelLabel="Batal"
+        variant="default"
+        onConfirm={() => {
+          onMatchEnd();
+          setShowEndDialog(false);
+        }}
+      />
+
+      {/* Dialog Konfirmasi Reset */}
+      <ConfirmDialog
+        open={showResetDialog}
+        onOpenChange={setShowResetDialog}
+        title="Reset Pertandingan?"
+        description="Semua skor, progres timer, babak/ronde, status, pilihan Mystery Box, dan media aktif akan dihapus. Daftar tim dan konfigurasi sesi tetap. Aksi ini tidak dapat dibatalkan."
+        confirmLabel="Ya, Reset"
+        cancelLabel="Batal"
+        variant="destructive"
+        onConfirm={() => {
+          onMatchReset();
+          setShowResetDialog(false);
+        }}
+      />
     </div>
   );
 }
