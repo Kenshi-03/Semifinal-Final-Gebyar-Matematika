@@ -19,6 +19,7 @@ import { Route as ProtectedAppRouteImport } from './routes/_protected/app'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
 import { Route as ApiNotesIndexRouteImport } from './routes/api/notes/index'
 import { Route as ApiNotesIdRouteImport } from './routes/api/notes/$id'
+import { Route as ProtectedOperatorFinalSlotIdRouteImport } from './routes/_protected/operator/final/$slotId'
 import { Route as ProtectedOperatorSemifinalSlotIdRouteImport } from './routes/_protected/operator/semifinal/$slotId'
 import { Route as ApiAdminNotesIndexRouteImport } from './routes/api/admin/notes/index'
 import { Route as ApiAdminNotesIdRouteImport } from './routes/api/admin/notes/$id'
@@ -71,6 +72,12 @@ const ApiNotesIdRoute = ApiNotesIdRouteImport.update({
   path: '/api/notes/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProtectedOperatorFinalSlotIdRoute =
+  ProtectedOperatorFinalSlotIdRouteImport.update({
+    id: '/operator/final/$slotId',
+    path: '/operator/final/$slotId',
+    getParentRoute: () => ProtectedRoute,
+  } as any)
 const ProtectedOperatorSemifinalSlotIdRoute =
   ProtectedOperatorSemifinalSlotIdRouteImport.update({
     id: '/operator/semifinal/$slotId',
@@ -97,6 +104,7 @@ export interface FileRoutesByFullPath {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/notes/$id': typeof ApiNotesIdRoute
   '/api/notes/': typeof ApiNotesIndexRoute
+  '/operator/final/$slotId': typeof ProtectedOperatorFinalSlotIdRoute
   '/operator/semifinal/$slotId': typeof ProtectedOperatorSemifinalSlotIdRoute
   '/api/admin/notes/$id': typeof ApiAdminNotesIdRoute
   '/api/admin/notes/': typeof ApiAdminNotesIndexRoute
@@ -110,6 +118,7 @@ export interface FileRoutesByTo {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/notes/$id': typeof ApiNotesIdRoute
   '/api/notes': typeof ApiNotesIndexRoute
+  '/operator/final/$slotId': typeof ProtectedOperatorFinalSlotIdRoute
   '/operator/semifinal/$slotId': typeof ProtectedOperatorSemifinalSlotIdRoute
   '/api/admin/notes/$id': typeof ApiAdminNotesIdRoute
   '/api/admin/notes': typeof ApiAdminNotesIndexRoute
@@ -126,6 +135,7 @@ export interface FileRoutesById {
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/notes/$id': typeof ApiNotesIdRoute
   '/api/notes/': typeof ApiNotesIndexRoute
+  '/_protected/operator/final/$slotId': typeof ProtectedOperatorFinalSlotIdRoute
   '/_protected/operator/semifinal/$slotId': typeof ProtectedOperatorSemifinalSlotIdRoute
   '/api/admin/notes/$id': typeof ApiAdminNotesIdRoute
   '/api/admin/notes/': typeof ApiAdminNotesIndexRoute
@@ -141,6 +151,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/notes/$id'
     | '/api/notes/'
+    | '/operator/final/$slotId'
     | '/operator/semifinal/$slotId'
     | '/api/admin/notes/$id'
     | '/api/admin/notes/'
@@ -154,6 +165,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/notes/$id'
     | '/api/notes'
+    | '/operator/final/$slotId'
     | '/operator/semifinal/$slotId'
     | '/api/admin/notes/$id'
     | '/api/admin/notes'
@@ -169,6 +181,7 @@ export interface FileRouteTypes {
     | '/api/auth/$'
     | '/api/notes/$id'
     | '/api/notes/'
+    | '/_protected/operator/final/$slotId'
     | '/_protected/operator/semifinal/$slotId'
     | '/api/admin/notes/$id'
     | '/api/admin/notes/'
@@ -257,6 +270,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiNotesIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_protected/operator/final/$slotId': {
+      id: '/_protected/operator/final/$slotId'
+      path: '/operator/final/$slotId'
+      fullPath: '/operator/final/$slotId'
+      preLoaderRoute: typeof ProtectedOperatorFinalSlotIdRouteImport
+      parentRoute: typeof ProtectedRoute
+    }
     '/_protected/operator/semifinal/$slotId': {
       id: '/_protected/operator/semifinal/$slotId'
       path: '/operator/semifinal/$slotId'
@@ -296,12 +316,14 @@ const AuthRouteWithChildren = AuthRoute._addFileChildren(AuthRouteChildren)
 interface ProtectedRouteChildren {
   ProtectedAdminRoute: typeof ProtectedAdminRoute
   ProtectedAppRoute: typeof ProtectedAppRoute
+  ProtectedOperatorFinalSlotIdRoute: typeof ProtectedOperatorFinalSlotIdRoute
   ProtectedOperatorSemifinalSlotIdRoute: typeof ProtectedOperatorSemifinalSlotIdRoute
 }
 
 const ProtectedRouteChildren: ProtectedRouteChildren = {
   ProtectedAdminRoute: ProtectedAdminRoute,
   ProtectedAppRoute: ProtectedAppRoute,
+  ProtectedOperatorFinalSlotIdRoute: ProtectedOperatorFinalSlotIdRoute,
   ProtectedOperatorSemifinalSlotIdRoute: ProtectedOperatorSemifinalSlotIdRoute,
 }
 

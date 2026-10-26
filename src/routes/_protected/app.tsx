@@ -53,8 +53,10 @@ function AppPage() {
           <p className="mt-2 text-sm text-muted-foreground">
             Kelola pertandingan final dengan format Estafet, Redzone, dan Rebutan.
           </p>
-          <Button variant="outline" size="sm" disabled className="mt-4">
-            Segera Hadir
+          <Button variant="default" size="sm" className="mt-4" asChild>
+            <Link to="/operator/final/$slotId" params={{ slotId: "slot-final" }}>
+              Slot Final
+            </Link>
           </Button>
         </Card>
       </div>
