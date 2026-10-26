@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { MatchSlot } from "@/lib/mock-data";
+import { useTimer } from "@/lib/use-timer";
 import {
   Play,
   Pause,
@@ -47,17 +48,19 @@ export function SemifinalScreen({
     jeda: "bg-yellow-500",
   };
 
-  const formatTimer = (ms: number) => {
-    const totalSeconds = Math.floor(ms / 1000);
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
-  };
-
   const currentBabak = slot.babaks.find((b) => b.id === slot.current_babak_id);
   const currentRound = currentBabak?.rounds?.find(
     (r) => r.id === slot.current_round_id,
   );
+
+  const { formattedTime, isTimeout } = useTimer({
+    initialMs: slot.timer_remaining_ms,
+    isRunning: slot.timer_status === "berjalan",
+    onTimeout: () => {
+      console.log("Timer habis!");
+      // Nanti: trigger event server timer_habis
+    },
+  });
 
   return (
     <div className="space-y-6">
@@ -219,11 +222,14 @@ export function SemifinalScreen({
             </Badge>
           </div>
           <div className="mb-6 text-center">
-            <div className="text-6xl font-bold tabular-nums">
-              {formatTimer(slot.timer_remaining_ms)}
+            <div
+              className={`text-6xl font-bold tabular-nums ${isTimeout ? "text-red-600" : ""}`}
+            >
+              {formattedTime}
             </div>
             <p className="mt-2 text-sm text-muted-foreground">
               {slot.timer_stage && `Tahap ${slot.timer_stage} (Estafet)`}
+              {isTimeout && " — Waktu Habis!"}
             </p>
           </div>
           <div className="grid grid-cols-3 gap-2">
