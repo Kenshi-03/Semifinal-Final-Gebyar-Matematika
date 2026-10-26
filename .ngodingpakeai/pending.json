@@ -1,0 +1,696 @@
+{
+  "repo": "buat-prd-untuk-aplikasi-web-semifinal-final-gebyar",
+  "generatedForCommit": "4197dcddd539e430fb718d908c1888d8f0f00b24",
+  "files": [
+    {
+      "path": ".agents/skills/build-feature/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 4311
+    },
+    {
+      "path": ".agents/skills/create-variant/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 1901
+    },
+    {
+      "path": ".agents/skills/dev-database/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 2480
+    },
+    {
+      "path": ".agents/skills/starter-setup/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 2393
+    },
+    {
+      "path": ".claude/skills/ngodingpakeai/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 19096
+    },
+    {
+      "path": ".codex/config.toml",
+      "reason": "new",
+      "language": "toml",
+      "size": 273
+    },
+    {
+      "path": ".codex/skills/ngodingpakeai/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 19096
+    },
+    {
+      "path": ".cursor/mcp.json",
+      "reason": "new",
+      "language": "json",
+      "size": 84
+    },
+    {
+      "path": ".cursor/rules/starter.mdc",
+      "reason": "new",
+      "language": null,
+      "size": 342
+    },
+    {
+      "path": ".cursor/skills/ngodingpakeai/SKILL.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 19096
+    },
+    {
+      "path": ".dockerignore",
+      "reason": "new",
+      "language": null,
+      "size": 629
+    },
+    {
+      "path": ".github/copilot-instructions.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 307
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "reason": "new",
+      "language": "yaml",
+      "size": 678
+    },
+    {
+      "path": ".gitignore",
+      "reason": "new",
+      "language": null,
+      "size": 276
+    },
+    {
+      "path": ".mcp.json",
+      "reason": "new",
+      "language": "json",
+      "size": 100
+    },
+    {
+      "path": ".ngodingpakeaiignore",
+      "reason": "new",
+      "language": null,
+      "size": 269
+    },
+    {
+      "path": ".nvmrc",
+      "reason": "new",
+      "language": null,
+      "size": 3
+    },
+    {
+      "path": ".prettierignore",
+      "reason": "new",
+      "language": null,
+      "size": 147
+    },
+    {
+      "path": ".prettierrc.json",
+      "reason": "new",
+      "language": "json",
+      "size": 63
+    },
+    {
+      "path": ".vscode/mcp.json",
+      "reason": "new",
+      "language": "json",
+      "size": 97
+    },
+    {
+      "path": "agent.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 787
+    },
+    {
+      "path": "AGENTS.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 29060
+    },
+    {
+      "path": "CLAUDE.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 260
+    },
+    {
+      "path": "components.json",
+      "reason": "new",
+      "language": "json",
+      "size": 455
+    },
+    {
+      "path": "compose.dev.yaml",
+      "reason": "new",
+      "language": "yaml",
+      "size": 744
+    },
+    {
+      "path": "compose.test.yaml",
+      "reason": "new",
+      "language": "yaml",
+      "size": 521
+    },
+    {
+      "path": "Dockerfile",
+      "reason": "new",
+      "language": null,
+      "size": 2212
+    },
+    {
+      "path": "docs/ai-workflow.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 4316
+    },
+    {
+      "path": "docs/architecture.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 7352
+    },
+    {
+      "path": "docs/backend.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 10147
+    },
+    {
+      "path": "docs/deployment.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 4286
+    },
+    {
+      "path": "docs/derivatives.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 2270
+    },
+    {
+      "path": "docs/local-development.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 3716
+    },
+    {
+      "path": "docs/prompts.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 1691
+    },
+    {
+      "path": "docs/variant.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 1763
+    },
+    {
+      "path": "drizzle/0000_auth.sql",
+      "reason": "new",
+      "language": "sql",
+      "size": 2242
+    },
+    {
+      "path": "drizzle/0001_notes.sql",
+      "reason": "new",
+      "language": "sql",
+      "size": 638
+    },
+    {
+      "path": "drizzle/0002_roles.sql",
+      "reason": "new",
+      "language": "sql",
+      "size": 376
+    },
+    {
+      "path": "drizzle/meta/0000_snapshot.json",
+      "reason": "new",
+      "language": "json",
+      "size": 9349
+    },
+    {
+      "path": "drizzle/meta/0001_snapshot.json",
+      "reason": "new",
+      "language": "json",
+      "size": 11759
+    },
+    {
+      "path": "drizzle/meta/0002_snapshot.json",
+      "reason": "new",
+      "language": "json",
+      "size": 12557
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "reason": "new",
+      "language": "json",
+      "size": 465
+    },
+    {
+      "path": "drizzle.config.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 550
+    },
+    {
+      "path": "e2e/auth.spec.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 4042
+    },
+    {
+      "path": "e2e/notes.spec.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 7835
+    },
+    {
+      "path": "e2e/roles.spec.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 5124
+    },
+    {
+      "path": "e2e/starter.spec.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 2059
+    },
+    {
+      "path": "eslint.config.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 626
+    },
+    {
+      "path": "LICENSE",
+      "reason": "new",
+      "language": null,
+      "size": 1083
+    },
+    {
+      "path": "package-lock.json",
+      "reason": "new",
+      "language": "json",
+      "size": 320516
+    },
+    {
+      "path": "package.json",
+      "reason": "new",
+      "language": "json",
+      "size": 2277
+    },
+    {
+      "path": "playwright.config.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1029
+    },
+    {
+      "path": "README.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 9860
+    },
+    {
+      "path": "scripts/create-variant.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 5195
+    },
+    {
+      "path": "scripts/database.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 2440
+    },
+    {
+      "path": "scripts/doctor.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 3569
+    },
+    {
+      "path": "scripts/lib.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 4022
+    },
+    {
+      "path": "scripts/migrate.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 868
+    },
+    {
+      "path": "scripts/postgres.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 1796
+    },
+    {
+      "path": "scripts/prepare.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 286
+    },
+    {
+      "path": "scripts/set-role.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 2228
+    },
+    {
+      "path": "scripts/setup.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 591
+    },
+    {
+      "path": "scripts/test-setup.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 4396
+    },
+    {
+      "path": "scripts/test.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 3400
+    },
+    {
+      "path": "src/components/auth-form.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 5466
+    },
+    {
+      "path": "src/components/brand.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 768
+    },
+    {
+      "path": "src/components/copy-prompt.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1044
+    },
+    {
+      "path": "src/components/providers.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 192
+    },
+    {
+      "path": "src/components/sign-out-button.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1209
+    },
+    {
+      "path": "src/components/ui/button.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 2392
+    },
+    {
+      "path": "src/components/ui/card.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1990
+    },
+    {
+      "path": "src/components/ui/input.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 957
+    },
+    {
+      "path": "src/components/ui/label.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 603
+    },
+    {
+      "path": "src/config/site.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 261
+    },
+    {
+      "path": "src/db/index.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 801
+    },
+    {
+      "path": "src/db/schema/account.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1057
+    },
+    {
+      "path": "src/db/schema/index.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 230
+    },
+    {
+      "path": "src/db/schema/notes.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 825
+    },
+    {
+      "path": "src/db/schema/session.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 904
+    },
+    {
+      "path": "src/db/schema/user.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 856
+    },
+    {
+      "path": "src/db/schema/verification.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 639
+    },
+    {
+      "path": "src/lib/api.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 3628
+    },
+    {
+      "path": "src/lib/auth-client.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 508
+    },
+    {
+      "path": "src/lib/auth.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1397
+    },
+    {
+      "path": "src/lib/env.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1037
+    },
+    {
+      "path": "src/lib/mock-data.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 17116
+    },
+    {
+      "path": "src/lib/permissions.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1499
+    },
+    {
+      "path": "src/lib/session.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 650
+    },
+    {
+      "path": "src/lib/session.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1093
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 91
+    },
+    {
+      "path": "src/router.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 578
+    },
+    {
+      "path": "src/routes/api/admin/notes/$id.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 840
+    },
+    {
+      "path": "src/routes/api/admin/notes/index.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 784
+    },
+    {
+      "path": "src/routes/api/auth/$.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 384
+    },
+    {
+      "path": "src/routes/api/notes/$id.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1486
+    },
+    {
+      "path": "src/routes/api/notes/index.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1038
+    },
+    {
+      "path": "src/routes/index.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 423
+    },
+    {
+      "path": "src/routes/_auth/sign-in.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 334
+    },
+    {
+      "path": "src/routes/_auth/sign-up.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 341
+    },
+    {
+      "path": "src/routes/_auth.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 787
+    },
+    {
+      "path": "src/routes/_protected/admin.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 3193
+    },
+    {
+      "path": "src/routes/_protected/app.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 3262
+    },
+    {
+      "path": "src/routes/_protected.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1069
+    },
+    {
+      "path": "src/routes/__root.tsx",
+      "reason": "new",
+      "language": "typescript",
+      "size": 2631
+    },
+    {
+      "path": "src/routeTree.gen.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 9626
+    },
+    {
+      "path": "src/services/notes.service.server.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 2843
+    },
+    {
+      "path": "src/styles/globals.css",
+      "reason": "new",
+      "language": "css",
+      "size": 2039
+    },
+    {
+      "path": "src/validators/notes.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 897
+    },
+    {
+      "path": "starter.config.json",
+      "reason": "new",
+      "language": "json",
+      "size": 246
+    },
+    {
+      "path": "tests/database.test.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 2921
+    },
+    {
+      "path": "tests/setup.test.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 4459
+    },
+    {
+      "path": "tests/variant.test.mjs",
+      "reason": "new",
+      "language": "javascript",
+      "size": 4241
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "reason": "new",
+      "language": "markdown",
+      "size": 461
+    },
+    {
+      "path": "tsconfig.json",
+      "reason": "new",
+      "language": "json",
+      "size": 641
+    },
+    {
+      "path": "vite.config.ts",
+      "reason": "new",
+      "language": "typescript",
+      "size": 1184
+    }
+  ]
+}
